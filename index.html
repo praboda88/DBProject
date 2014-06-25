@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	<title>Car Management - Admin page</title>
+
+	<link rel="stylesheet" href="css/jquery.treeview.css" />
+	<link rel="stylesheet" href="css/screen.css" />
+	<style>
+		#main {
+		  border: 1px solid #ccc;
+		  float: left;
+		  height: 100%;
+		  width: 23%;
+		}
+		#right_panel{ 
+			width: 75%;
+			float:right;	
+			height: 100%;	
+		}
+		#right_panel_html_viewer {
+			width: 100%;
+			height: 100%;
+			border: none;	
+		}
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/jquery.treeview.js"></script>
+
+	<script type="text/javascript" src="js/demo.js"></script>
+	<script type="text/javascript" >
+	$(document).ready(function(){
+		$('.tree_view_links').click(function(){
+			$('#right_panel_html_viewer').attr('src', $(this).attr('title'));
+		});
+	})	;
+    </script>
+	</head>
+	<body>
+
+	<h1 id="banner">Car Management - Admin page</h1>
+	<div id="main">
+
+	<ul id="browser" class="filetree">
+		<li><span class="folder"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Dash Board</a></span>
+		</li>
+        <li><span class="folder"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Cars & Fleet </a></span>
+			<ul>
+				<li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Add Cars</a></span></li>
+                <li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Manage Cars Cars</a></span></li>
+			</ul>
+		</li>
+        <li><span class="folder"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Bookings</a></span>
+			<ul>
+				<li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">New Booking</a></span></li>
+                <li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Manage Admin Bookings </a></span></li>
+                <li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Manage Agents Bookings </a></span></li>
+                <li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Manage Web Bookings</a></span></li>
+			</ul>
+		</li>
+		<li><span class="folder"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Users & Agents</a></span>
+			<ul>
+				<li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">New Admin/Agent</a></span></li>
+                <li><span class="file"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Manage Agent/Admin</a></span></li>
+			</ul>
+		</li>
+		<li><span class="folder"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Sales Summary Report</a></span>
+		<li><span class="folder"><a class="tree_view_links" title="test1.html" href="javascript:void(0);">Thrash (Recycle Bin)</a></span>
+		
+	</ul>
+
+</div><!-- main div -->
+<div id="right_panel">
+	<iframe id="right_panel_html_viewer" src=""></iframe>
+</div>
+
+</body></html>
